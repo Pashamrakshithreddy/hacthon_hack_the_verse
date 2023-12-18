@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scoreboard</title>
+  <style>
+    /* Styles remain the same as previous code */
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  background-image: url('https://wallpapercave.com/wp/wp2578580.jpg');
+  background-size: cover;
+}
+
+.leaderboard {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 70%;
+  margin: 20px auto;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  height: 10px;
+  width: 20px;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+  height: 10px;
+  width: 20px;
+}
+
+tr {
+    height: 10px;
+  width: 20px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.scoreboard {
+  margin-bottom: 20px;
+}
+
+.scoreboard input {
+  margin-right: 10px;
+}
+
+.scoreboard button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+button{
+    background-color: gray;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 100px;
+    border-radius: 10px;
+    font-size: large;
+}
+
+input{
+    height: 30px;
+    width: 350px;
+    background-color: rgb(217, 217, 217);
+    border-radius: 10px;
+    color: #000;
+    font-weight: bolder;
+}
+
+  </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leaderboard with Dynamic Scoreboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="leaderboard">
+    <h1>| LeaderBoarD |</h1>
+    <div class="scoreboard">
+      <input type="text" id="playerName" placeholder="Player Name">
+      <input type="number" id="playerScore" placeholder="Player Score">
+      <button onclick="addPlayer()">AdD PlaYeR.</button>
+    </div>
+    <table id="leaderboardTable">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboardBody">
+        <!-- Leaderboard content will go here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+  <script>
+   let leaderboardData = [];
+
+function populateLeaderboard() {
+  const leaderboardBody = document.getElementById('leaderboardBody');
+  leaderboardBody.innerHTML = '';
+
+  leaderboardData.forEach(player => {
+    const row = `<tr>
+                  <td>${player.rank}</td>
+                  <td>${player.name}</td>
+                  <td>${player.score}</td>
+                </tr>`;
+    leaderboardBody.innerHTML += row;
+  });
+}
+
+function updateRanks() {
+  leaderboardData.sort((a, b) => b.score - a.score);
+
+  leaderboardData.forEach((player, index) => {
+    player.rank = index + 1;
+  });
+
+  populateLeaderboard();
+}
+
+function addPlayer() {
+  const playerNameInput = document.getElementById('playerName');
+  const playerScoreInput = document.getElementById('playerScore');
+
+  const playerName = playerNameInput.value.trim();
+  const playerScore = parseInt(playerScoreInput.value);
+
+  if (playerName !== '' && !isNaN(playerScore)) {
+    const newPlayer = {
+      rank: 0,
+      name: playerName,
+      score: playerScore
+    };
+
+    leaderboardData.push(newPlayer);
+    updateRanks();
+
+
+    playerNameInput.value = '';
+    playerScoreInput.value = '';
+  } else {
+    alert('Please enter valid name and score.');
+  }
+}
+
+window.onload = function() {
+  populateLeaderboard();
+};
+
+
+  </script>
+</body>
+</html>

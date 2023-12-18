@@ -1,0 +1,133 @@
+body, html {
+   /* height: 100%;
+   margin: 5%; */
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   background-image: url('https://th.bing.com/th/id/R.95520bc0570fec6418721b571ea07d5d?rik=t0DDucZclVKQwg&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f9%2f1%2ff%2f645001.jpg&ehk=pdnsoIe7eajjZv%2bagaPC87B1uHOgcD3JT%2bYegPPHQi0%3d&risl=&pid=ImgRaw&r=0');
+   background-size: 100%;
+   color: aliceblue;
+ }
+
+ .heading {
+   font-size: 2em;
+   margin-bottom: 20px;
+   font-size: xx-large;
+ }
+ 
+ .options {
+   background-color: none;
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+ }
+
+/* Define default button styles */
+.options {
+   padding: 10px 20px;
+   font-size: 16px;
+   background-color: none;
+   color: #fff;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+   margin-top: 50px;
+  }
+ 
+ .button:hover {
+   /* Use the box-shadow property to create a glowing effect */
+   box-shadow: 0 0 20px #451c1c;
+   /* Use the transform property to scale up the button slightly */
+   transform: scale(1.1);
+   /* Use the transition property to animate the effect smoothly */
+   transition: all 0.3s;
+}
+
+ button {
+   padding: 10px 20px;
+   font-size: 1em;
+   cursor: pointer;
+   background-color: 25%;
+   width: 200px;
+   height: 50px;
+   border: none;
+   border-radius: 10px;
+   font-size: 20px;
+   font-weight: bold;
+   color: rgb(255, 255, 255);
+   background-color: #a58686;
+   cursor: pointer;
+ }
+
+ .get{
+   display: flex;
+   align-items:flex-end;
+   justify-content:end;
+   font-size: xx-large;
+   font-weight: bolder;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+ }
+
+ .snake{
+   height: 150px;
+   width: 150px;
+   border-radius: 50%;
+   background-image: url('https://i2.wp.com/9to5google.com/wp-content/uploads/sites/4/2019/09/chrome_snake_game_2.png?w=496&h=496&crop=1&quality=82&strip=all&ssl=1');
+   background-size: cover;
+}
+ 
+.ttt{
+   height: 150px;
+   width: 150px;
+   border-radius: 50%;
+   background-image: url('https://logodix.com/logo/647618.png');
+   background-size: cover;
+}
+ 
+ 
+.bird{
+   height: 150px;
+   width: 150px;
+   border-radius: 50%;
+   background-image: url('https://i0.wp.com/techverse.net/wp-content/uploads/2014/02/flappy-bird-logo.jpeg?fit=300%2C300&ssl=1');
+   background-size: cover;
+}
+a{
+   text-decoration: none;
+   color: #fff;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: larger;
+   font-weight: bolder;
+}
+
+.mcqs{
+   height: 150px;
+   width: 150px;
+   border-radius: 50%;
+   background-image: url('https://image.shutterstock.com/image-vector/mq-logo-monogram-negative-space-260nw-1601575270.jpg');
+   background-size: cover;
+} 
+body {
+   font-family: Arial, sans-serif;
+   text-align: center;
+ }
+ 
+ .quiz-container {
+   margin: 50px auto;
+   max-width: 600px;
+ }
+ 
+ .options {
+   margin-top: 20px;
+ }
+ 
+ button {
+   padding: 10px 20px;
+   margin-top: 20px;
+   cursor: pointer;
+ }
+ 
+ .timer {
+   margin-top: 20px;
+ }
+ 
+

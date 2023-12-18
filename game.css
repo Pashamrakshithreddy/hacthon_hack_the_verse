@@ -1,0 +1,40 @@
+body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #f0f0f0;
+	background-image: url('snakegame.jpg');
+	background-size: cover;
+  }
+  
+  #game-board {
+	display: grid;
+	grid-template-columns: repeat(20, 20px);
+  }
+  
+  .cell {
+	width: 20px;
+	height: 20px;
+	background-color: #ddd;
+	border: 1px solid #fff;
+  }
+  
+  .snake {
+	background-color: #000;
+  }
+  
+  .food {
+	background-color: red;
+  }
+  
+  #score {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 24px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-weight: bolder;	
+  }
+  
